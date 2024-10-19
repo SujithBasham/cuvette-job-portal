@@ -1,0 +1,201 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Header Styles */
+.header {
+    width: 100%;
+    padding: 20px 50px;
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: absolute;
+    top: 0;
+}
+
+.logo {
+    width: 150px;
+}
+
+.contact-link {
+    font-size: 16px;
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.contact-link:hover {
+    text-decoration: underline;
+}
+
+/* Container Styles */
+.container {
+    display: flex;
+    width: 90%;
+    max-width: 1200px;
+    margin-top: 100px;
+    border-color: black;
+}
+
+.left-section {
+    width: 50%;
+    padding: 20px;
+    background-color: #fFF;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.left-text {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #555;
+}
+
+.right-section {
+    width: 50%;
+    padding: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-container {
+    width: 100%;
+    max-width: 400px;
+    padding: 20px;
+    border-radius: 25px; /* Make the corners more rounded */
+    background-color: white;
+    position: relative;
+    
+    /* Set up gradient border */
+    border: 1px solid transparent; /* Transparent border */
+    background-image: linear-gradient(white, white), /* white background inside */
+                      linear-gradient(90deg, #3F71FF, #AA54FF); /* gradient border */
+    background-origin: border-box;
+    background-clip: padding-box, border-box; /* Clip the background */
+    
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); /* Add a subtle shadow for depth */
+}
+
+h2 {
+    font-size: 28px;
+    color: #1a1a1a;
+    margin-bottom: 10px;
+    text-align: center; /* Center the heading */
+}
+
+p {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 20px;
+    text-align: center; /* Center the subheading text */
+}
+
+.input-container {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.input-container .icon {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+    stroke: #888;
+}
+
+.input-container input {
+    width: 100%;
+    padding: 15px;
+    padding-left: 40px; /* Space for the icon */
+    border: 1px solid #ddd;
+    border-radius: 10px; /* Slightly rounded input fields */
+    font-size: 16px;
+    transition: all 0.3s ease; /* Smooth transition for hover/focus */
+}
+
+.input-container input:focus {
+    border-color: #3F71FF; /* Blue highlight on focus */
+    box-shadow: 0 0 5px rgba(63, 113, 255, 0.5); /* Soft glow effect on focus */
+}
+
+form button {
+    width: 100%;
+    padding: 15px;
+    background-color: #3F71FF;
+    border: none;
+    color: white;
+    font-size: 16px;
+    border-radius: 10px; /* Rounded button */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+form button:hover {
+    background-color: #2C5AFF;
+}
+
+.terms {
+    font-size: 12px;
+    color: #888;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.terms a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.terms a:hover {
+    text-decoration: underline;
+}
+
+.input-container {
+    position: relative;
+    margin-bottom: 20px; /* Margin between each input field */
+}
+
+.input-container input {
+    width: 100%;
+    padding: 15px;
+    padding-left: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.input-container button {
+    width: 100%;
+    padding: 15px;
+    background-color: #3F71FF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 5px; /* Added 5px gap between input and button */
+}
+
+.input-container button:hover {
+    background-color: #2C5AFF;
+}
+
+

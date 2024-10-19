@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OTP Verification - Cuvette</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .input-container {
+            position: relative;
+            margin-bottom: 20px;
+        }
+
+        .input-container input {
+            width: 100%;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        .input-container button {
+            background-color: #3F71FF;
+            border: none;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 14px;
+            margin-top: 10px;
+        }
+
+        .tick {
+            width: 20px;
+            height: 20px;
+            fill: green;
+            position: absolute;
+            right: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            display: none; /* Hidden initially */
+        }
+
+        .input-verified .tick {
+            display: block; /* Show tick when verified */
+        }
+
+        .input-verified button {
+            display: none; /* Hide the button when verified */
+        }
+    </style>
+</head>
+<body>
+
+ <!-- Header Section -->
+ <header class="header">
+    <img src="C:\cuvette project\cuvette_logo.svg" alt="Cuvette Logo" class="logo">
+    <a href="#" class="contact-link">Contact</a>
+</header>
+
+    <div class="container">
+        <div class="left-section">
+            <p class="left-text">
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley.
+            </p>
+        </div>
+
+        <div class="right-section">
+            <div class="form-container">
+                <h2>Sign Up</h2>
+                <p>Lorem Ipsum is simply dummy text</p>
+                <form id="otp-form">
+                    <!-- Email OTP input -->
+                    <div class="input-container" id="email-otp-container">
+                        <input type="text" name="email-otp" placeholder="Email OTP" required>
+                        <button type="button" class="verify-btn" onclick="verifyOTP('email-otp-container')">Verify</button>
+                        <svg class="tick" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="green">
+                            <path d="M10 15.172l-3.536-3.536-1.414 1.414L10 18 19.95 8.05l-1.414-1.414L10 15.172z"/>
+                        </svg>
+                    </div>
+
+                    <!-- Mobile OTP input -->
+                    <div class="input-container" id="mobile-otp-container">
+                        <input type="text" name="mobile-otp" placeholder="Mobile OTP" required>
+                        <button type="button" class="verify-btn" onclick="verifyOTP('mobile-otp-container')">Verify</button>
+                        <svg class="tick" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="green">
+                            <path d="M10 15.172l-3.536-3.536-1.414 1.414L10 18 19.95 8.05l-1.414-1.414L10 15.172z"/>
+                        </svg>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Track verification status for both OTP fields
+        let emailVerified = false;
+        let mobileVerified = false;
+
+        function verifyOTP(containerId) {
+            const container = document.getElementById(containerId);
+            container.classList.add('input-verified');
+            
+            // Update verification status
+            if (containerId === 'email-otp-container') {
+                emailVerified = true;
+            } else if (containerId === 'mobile-otp-container') {
+                mobileVerified = true;
+            }
+
+            // Check if both are verified, then delay redirect by 3 seconds
+            if (emailVerified && mobileVerified) {
+                setTimeout(function() {
+                    window.location.href = "main-home.html";
+                }, 3000); // 3000ms = 3 seconds delay
+            }
+        }
+    </script>
+
+</body>
+</html>
